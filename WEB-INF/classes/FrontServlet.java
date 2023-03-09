@@ -2,14 +2,18 @@ package etu1784.framework.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import util.Util;
+import etu1784.framework.Mapping;
 
 public class FrontServlet extends HttpServlet {
+    HashMap<String, Mapping> MappingUrls;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
